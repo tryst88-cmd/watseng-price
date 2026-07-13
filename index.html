@@ -136,7 +136,7 @@ td.act .wa:hover{background:#1EBE5A}
   .ftr .v{font-size:12px;margin-top:2px}
   .ftr .call{display:inline-block}
 }
-</style></head><body>
+.hdr{position:relative}.hslot{display:flex;align-items:center;gap:8px;margin-left:auto;position:relative}.hs-win{width:118px;height:38px;border-radius:9px;overflow:hidden;background:#fbf7ea;border:3px solid #e0a83a;position:relative;box-shadow:inset 0 0 0 2px #b9832a;flex:none}.hs-reel{position:absolute;left:0;right:0;top:0;will-change:transform}.hs-cell{height:38px;display:flex;align-items:center;justify-content:center;gap:5px;padding:0 6px}.hs-cell .em{font-size:18px;line-height:1}.hs-cell .nm{font-size:14px;font-weight:800;color:#16224e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:74px}.hs-btn{border:0;cursor:pointer;font-family:inherit;font-size:12.5px;font-weight:800;letter-spacing:.5px;color:#3a2400;background:linear-gradient(180deg,#ffd873,#e0a83a);padding:8px 12px;border-radius:999px;box-shadow:0 3px 0 #a9781f;white-space:nowrap;transition:.08s}.hs-btn:active{transform:translateY(2px);box-shadow:0 1px 0 #a9781f}.hs-btn[disabled]{filter:grayscale(.35) brightness(.92);cursor:default}.hs-pop{position:absolute;top:calc(100% + 8px);right:0;width:250px;background:#fff;border-radius:12px;padding:12px 14px;color:#16224e;box-shadow:0 14px 34px rgba(8,14,40,.4);opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .5s ease,transform .3s ease;z-index:60}.hs-pop.show{opacity:1;transform:none;pointer-events:auto}.hs-pop .wt{font-size:11px;color:#c0392b;font-weight:700;letter-spacing:.5px}.hs-pop .dest{font-size:18px;font-weight:800;margin:2px 0}.hs-pop .tour{font-size:12px;color:#42506f;line-height:1.45}.hs-pop .fr{font-size:12.5px;font-weight:800;color:#d22626;margin-top:3px}.hs-pop a{display:block;margin-top:9px;text-align:center;text-decoration:none;padding:9px;border-radius:9px;background:#25d366;color:#fff;font-weight:800;font-size:13px}.hs-pop .cls{position:absolute;top:4px;right:6px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:#8a93a8;font-size:18px;cursor:pointer;font-weight:800;line-height:1;border-radius:50%}.hs-pop .cls:hover{background:#eef1f6;color:#42506f}@media(max-width:720px){.hslot{order:9;width:100%;margin:8px auto 0;justify-content:center}.hs-pop{left:50%;right:auto;width:250px;max-width:none;transform:translate(-50%,-6px)}.hs-pop.show{transform:translate(-50%,0)}}</style></head><body>
 <div class="nojs" id="nojs">&#9888;&#65039; 当前打开方式不支持搜索/筛选（预览模式禁用了互动功能）<br>请长按/分享此文件 &#8594; 选「用 Safari 打开」或「用 Chrome 打开」</div>
 <div class="wrap">
   <div class="hdr">
@@ -146,7 +146,44 @@ td.act .wa:hover{background:#1EBE5A}
       <div class="t2">配 套 速 查</div>
       <div class="t3">发盛旅运 Wat Seng Travel &amp; Tours (M) Sdn Bhd · 自家团 + 5家合作旅行社 (UbinGO · e-world · GD · FS China · Signature)</div>
     </div>
-    <div class="right">
+    <div class="hslot" id="hslot">
+  <div class="hs-win"><div class="hs-reel" id="hsReel"></div></div>
+  <button class="hs-btn" id="hsGo">&#127920; 试手气</button>
+  <div class="hs-pop" id="hsPop"><span class="cls" id="hsCls">&#215;</span><div class="wt">&#127881; 命运选中</div><div class="dest" id="hsDest"></div><div class="tour" id="hsTour"></div><div class="fr" id="hsFr"></div><a id="hsWa" href="#" target="_blank" rel="noopener">WhatsApp 报名 / 询问 &#8594;</a></div>
+</div>
+<script>
+(function(){
+  function init(){
+    var DATA=[{"cn": "海南", "emoji": "🏝️", "fr": "RM1,799", "tour": "4D3N 海南岛 (飞萤 FY)", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20HAINAN-09Oct2026%204D3N%20%E6%B5%B7%E5%8D%97%E5%B2%9B%20%28%E9%A3%9E%E8%90%A4%20FY%29"}, {"cn": "西安", "emoji": "🏯", "fr": "RM3,999", "tour": "7D5N 西安 + 华山 Xi'An + MT Hua", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20XIAN-13Sep2026%207D5N%20%E8%A5%BF%E5%AE%89%20%2B%20%E5%8D%8E%E5%B1%B1%20Xi%27An%20%2B%20MT%20Hua"}, {"cn": "云南", "emoji": "🏔️", "fr": "RM5,199", "tour": "9D7N 多彩云南 · 梅里雪山 (YN-ML9)", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20YUNNAN-14Sep2026%209D7N%20%E5%A4%9A%E5%BD%A9%E4%BA%91%E5%8D%97%20%C2%B7%20%E6%A2%85%E9%87%8C%E9%9B%AA%E5%B1%B1%20%28YN-ML9%29"}, {"cn": "呼伦贝尔", "emoji": "🐎", "fr": "RM6,499", "tour": "8D6N 呼伦贝尔 Hulunbuir", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20HULUNBUI-16Sep2026%208D6N%20%E5%91%BC%E4%BC%A6%E8%B4%9D%E5%B0%94%20Hulunbuir"}, {"cn": "青海 · 甘肃", "emoji": "🏜️", "fr": "RM6,199", "tour": "9D7N 甘肃 + 青海 Gansu + Qinghai", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20QINGHAIG-19Sep2026%209D7N%20%E7%94%98%E8%82%83%20%2B%20%E9%9D%92%E6%B5%B7%20Gansu%20%2B%20Qinghai"}, {"cn": "贵州", "emoji": "⛰️", "fr": "RM5,998 /对", "tour": "8D7N 贵州 B1F1 买一送一", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20GUIZHOU-04Oct2026%208D7N%20%E8%B4%B5%E5%B7%9E%20B1F1%20%E4%B9%B0%E4%B8%80%E9%80%81%E4%B8%80"}, {"cn": "重庆", "emoji": "🌶️", "fr": "RM3,799", "tour": "6D5N 重庆 + 武隆 Chongqing + Wulong", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20CHONGQIN-16Oct2026%206D5N%20%E9%87%8D%E5%BA%86%20%2B%20%E6%AD%A6%E9%9A%86%20Chongqing%20%2B%20Wulong"}, {"cn": "九寨沟", "emoji": "💧", "fr": "RM5,999", "tour": "9天7夜 金秋九寨沟 · 四川之旅", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20JIUZHAIG-22Oct2026%209%E5%A4%A97%E5%A4%9C%20%E9%87%91%E7%A7%8B%E4%B9%9D%E5%AF%A8%E6%B2%9F%20%C2%B7%20%E5%9B%9B%E5%B7%9D%E4%B9%8B%E6%97%85"}, {"cn": "川西", "emoji": "🏞️", "fr": "RM5,699", "tour": "9天7夜 纵横川西 · 毕棚沟+四姑娘山", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20CHUANXI-23Oct2026%209%E5%A4%A97%E5%A4%9C%20%E7%BA%B5%E6%A8%AA%E5%B7%9D%E8%A5%BF%20%C2%B7%20%E6%AF%95%E6%A3%9A%E6%B2%9F%2B%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1"}, {"cn": "甘南", "emoji": "🐑", "fr": "RM5,699", "tour": "9天7夜 甘南 Gannan", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20GANNAN-23Oct2026%209%E5%A4%A97%E5%A4%9C%20%E7%94%98%E5%8D%97%20Gannan"}, {"cn": "芬兰 · 挪威 · 瑞典", "emoji": "🌌", "fr": "RM20,500", "tour": "14D11N 极光 芬兰·挪威·瑞典 Aurora", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20FINLANDN-05Dec2026%2014D11N%20%E6%9E%81%E5%85%89%20%E8%8A%AC%E5%85%B0%C2%B7%E6%8C%AA%E5%A8%81%C2%B7%E7%91%9E%E5%85%B8%20Aurora"}, {"cn": "广州 · 深圳", "emoji": "🏙️", "fr": "RM4,199", "tour": "吃在广州 · AI在深圳", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20GUANGZHO-11Dec2026%20%E5%90%83%E5%9C%A8%E5%B9%BF%E5%B7%9E%20%C2%B7%20AI%E5%9C%A8%E6%B7%B1%E5%9C%B3"}, {"cn": "哈尔滨", "emoji": "❄️", "fr": "RM8,399", "tour": "9D7N 哈尔滨 Harbin", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20HARBIN-22Dec2026%209D7N%20%E5%93%88%E5%B0%94%E6%BB%A8%20Harbin"}, {"cn": "新疆 · 贵州", "emoji": "⛰️", "fr": "RM6,899", "tour": "10D9N 新疆 + 贵州 Xinjiang + Guizhou (Gob)", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20XINJIANG-23Dec2026%2010D9N%20%E6%96%B0%E7%96%86%20%2B%20%E8%B4%B5%E5%B7%9E%20Xinjiang%20%2B%20Guizhou%20%28Gob%29"}, {"cn": "海岛", "emoji": "🏖️", "fr": "RM1,999", "tour": "4D3N 仙本那(珍珠岛)2人即走", "wa": "https://wa.me/60176655699?text=%E6%88%91%E6%83%B3%E8%AF%A2%E9%97%AE%20%E4%BB%99%E6%9C%AC%E9%82%A34D3N%204D3N%20%E4%BB%99%E6%9C%AC%E9%82%A3%28%E7%8F%8D%E7%8F%A0%E5%B2%9B%292%E4%BA%BA%E5%8D%B3%E8%B5%B0"}];if(!DATA||!DATA.length)return;
+    var n=DATA.length,H=38,BASE=14,reel=document.getElementById('hsReel');
+    function cell(it){return '<div class="hs-cell"><span class="em">'+it.emoji+'</span><span class="nm">'+it.cn+'</span></div>';}
+    var s='';for(var k=0;k<BASE;k++)for(var j=0;j<n;j++)s+=cell(DATA[j]);reel.innerHTML=s;
+    var pos=n*2,spinning=false;reel.style.transform='translateY('+(-pos*H)+'px)';
+    var go=document.getElementById('hsGo'),pop=document.getElementById('hsPop'),hideT;
+    function armHide(){clearTimeout(hideT);hideT=setTimeout(function(){pop.classList.remove('show');},5000);}
+    function closePop(){clearTimeout(hideT);pop.classList.remove('show');}
+    pop.addEventListener('mouseenter',function(){clearTimeout(hideT);});
+    pop.addEventListener('mouseleave',function(){if(pop.classList.contains('show'))armHide();});
+    function beep(f,t){try{var C=window._sac||(window._sac=new (window.AudioContext||window.webkitAudioContext)());var o=C.createOscillator(),g=C.createGain();o.frequency.value=f;o.connect(g);g.connect(C.destination);g.gain.setValueAtTime(.08,C.currentTime);g.gain.exponentialRampToValueAtTime(.001,C.currentTime+t);o.start();o.stop(C.currentTime+t);}catch(e){}}
+    function spin(){
+      if(spinning)return;spinning=true;clearTimeout(hideT);pop.classList.remove('show');go.setAttribute('disabled','');beep(320,.1);
+      var win=Math.floor(Math.random()*n),advance=n*8+((win-(pos%n)+n)%n),newPos=pos+advance;
+      reel.style.transition='transform 2.6s cubic-bezier(.15,.62,.2,1)';reel.style.transform='translateY('+(-newPos*H)+'px)';
+      var settled=false;
+      function finish(){if(settled)return;settled=true;reel.removeEventListener('transitionend',finish);
+        pos=win+n*2;reel.style.transition='none';reel.style.transform='translateY('+(-pos*H)+'px)';
+        var it=DATA[win];document.getElementById('hsDest').textContent=it.emoji+' '+it.cn;document.getElementById('hsTour').textContent=it.tour;
+        document.getElementById('hsFr').textContent=it.fr==='查询'?'团费：请询问顾问':'团费：起价 '+it.fr;document.getElementById('hsWa').href=it.wa;
+        pop.classList.add('show');armHide();beep(660,.14);setTimeout(function(){beep(880,.2);},120);spinning=false;go.removeAttribute('disabled');}
+      reel.addEventListener('transitionend',finish);setTimeout(finish,2800);
+    }
+    go.addEventListener('click',spin);
+    document.getElementById('hsCls').addEventListener('click',closePop);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<div class="right">
       <span class="badge"><span id="cnt">743</span> / 743 团</span>
       <div class="period">2026年8月–11月为主</div>
       <div class="upd">更新 13 July 2026</div>
