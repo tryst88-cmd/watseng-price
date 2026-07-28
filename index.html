@@ -181,6 +181,13 @@ td.act .wa{vertical-align:middle;margin-right:5px}
   background:#123b5d;color:#fff;font-size:22px;box-shadow:0 5px 18px rgba(18,59,93,.3);cursor:pointer;
   opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}
 .to-top.show{opacity:1;transform:none;pointer-events:auto}
+.ftr{display:block;text-align:center;background:linear-gradient(135deg,#0d3858,#087f7b);padding:18px 22px;
+  border-top:4px solid #f4c95d}
+.season-note{display:flex;align-items:center;justify-content:center;gap:12px;max-width:720px;margin:0 auto}
+.season-icon{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:42px;height:42px;
+  border-radius:13px;background:rgba(255,255,255,.14);font-size:21px}
+.season-title{color:#fff;font-size:15px;font-weight:900;letter-spacing:.03em}
+.season-copy{color:#d8f3ee;font-size:12px;font-weight:600;line-height:1.55;margin-top:3px}
 @media(max-width:719px){
   body{background:var(--paper)}
   .wrap{background:var(--paper)}
@@ -200,7 +207,11 @@ td.act .wa{vertical-align:middle;margin-right:5px}
   td.price{margin-right:0}
   .hslot{margin:9px 10px!important;width:auto!important}
   .active-filters{position:sticky;top:105px;z-index:17}
-  .ftr{background:linear-gradient(135deg,#0d3858,#087f7b)}
+  .ftr{position:static;padding:14px 16px;border-top-width:3px}
+  .season-note{gap:10px;text-align:left}
+  .season-icon{width:38px;height:38px;border-radius:11px;font-size:19px}
+  .season-title{font-size:13px}
+  .season-copy{font-size:10.5px}
 }
 </style></head><body>
 <div class="nojs" id="nojs">&#9888;&#65039; 当前打开方式不支持搜索/筛选（预览模式禁用了互动功能）<br>请长按/分享此文件 &#8594; 选「用 Safari 打开」或「用 Chrome 打开」</div>
@@ -280,13 +291,13 @@ td.act .wa{vertical-align:middle;margin-right:5px}
   </table></div>
   <div class="empty none" id="empty">没有符合的团 — 换个关键字 / 目的地 / 供应商试试</div>
   <div class="ftr">
-    <div>
-      <div class="k">联络 / WhatsApp 报名</div>
-      <div class="v">+60 17-665 5699 · 07-434 1998</div>
+    <div class="season-note">
+      <span class="season-icon" aria-hidden="true">📅</span>
+      <div>
+        <div class="season-title">团期主要集中在 9–11月</div>
+        <div class="season-copy">12月学校假期变动较快，请直接向我们查询最新位子与价格。</div>
+      </div>
     </div>
-    <a class="call" href="https://wa.me/60176655699" target="_blank" rel="noopener">WhatsApp 咨询</a>
-    <div class="lg">起价 from · 位子以顾问确认 · B1F1=价钱/对(2人)<br>
-    FB: Wat Seng Travel · wstours@gmail.com</div>
   </div>
 </div>
 <script>
