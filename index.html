@@ -691,6 +691,11 @@ td.act .wa svg{width:21px;height:21px}
 @media (prefers-reduced-motion:reduce){
   .desk-experience,tr.row:nth-child(-n+6){animation:none!important}
   .desk-mode,tr.row{transition:none!important}
+  .intro-piece.mark{animation:introFromTop .56s cubic-bezier(.16,.78,.24,1) .05s forwards!important}
+  .intro-piece.waves{animation:introFromLeft .58s cubic-bezier(.16,.78,.24,1) .30s forwards!important}
+  .intro-piece.chinese{animation:introFromRight .54s cubic-bezier(.16,.78,.24,1) .56s forwards!important}
+  .intro-piece.english{animation:introFromBottom .52s cubic-bezier(.16,.78,.24,1) .76s forwards!important}
+  .intro-complete{animation:introComplete .34s ease 1.04s forwards!important}
 }
 
 </style></head><body>
@@ -1016,7 +1021,7 @@ td.act .wa svg{width:21px;height:21px}
     var started=false;
     var startQueued=false;
     var logoReady=false;
-    var pageShown=false;
+    var pageShown=document.readyState==='complete';
     function finishIntro(){
       if(finished)return;
       finished=true;
@@ -1041,7 +1046,7 @@ td.act .wa svg{width:21px;height:21px}
         requestAnimationFrame(function(){
           started=true;
           intro.classList.add('ready');
-          setTimeout(finishIntro,4500);
+          setTimeout(finishIntro,3200);
         });
       });
     }
@@ -1049,6 +1054,10 @@ td.act .wa svg{width:21px;height:21px}
       if(logoReady&&pageShown)startIntro();
     }
     window.addEventListener('pageshow',function(){
+      pageShown=true;
+      maybeStartIntro();
+    },{once:true});
+    window.addEventListener('load',function(){
       pageShown=true;
       maybeStartIntro();
     },{once:true});
@@ -1062,7 +1071,7 @@ td.act .wa svg{width:21px;height:21px}
         logoProbe.onerror=function(){logoReady=true;maybeStartIntro();};
         if(logoProbe.complete){logoReady=true;maybeStartIntro();}
       }
-      setTimeout(function(){logoReady=true;maybeStartIntro();},1800);
+      setTimeout(function(){logoReady=true;pageShown=true;maybeStartIntro();},900);
     }else{
       logoReady=true;
       maybeStartIntro();
