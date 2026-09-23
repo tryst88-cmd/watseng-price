@@ -1015,6 +1015,8 @@ td.act .wa svg{width:21px;height:21px}
     var finished=false;
     var started=false;
     var startQueued=false;
+    var logoReady=false;
+    var pageShown=false;
     function finishIntro(){
       if(finished)return;
       finished=true;
@@ -1039,23 +1041,31 @@ td.act .wa svg{width:21px;height:21px}
         requestAnimationFrame(function(){
           started=true;
           intro.classList.add('ready');
-          setTimeout(finishIntro,3200);
+          setTimeout(finishIntro,4500);
         });
       });
     }
+    function maybeStartIntro(){
+      if(logoReady&&pageShown)startIntro();
+    }
+    window.addEventListener('pageshow',function(){
+      pageShown=true;
+      maybeStartIntro();
+    },{once:true});
     intro.addEventListener('click',finishIntro);
     var logoProbe=intro.querySelector('.intro-complete');
     if(logoProbe){
       if(logoProbe.decode){
-        logoProbe.decode().then(startIntro).catch(startIntro);
+        logoProbe.decode().then(function(){logoReady=true;maybeStartIntro();}).catch(function(){logoReady=true;maybeStartIntro();});
       }else{
-        logoProbe.onload=startIntro;
-        logoProbe.onerror=startIntro;
-        if(logoProbe.complete)startIntro();
+        logoProbe.onload=function(){logoReady=true;maybeStartIntro();};
+        logoProbe.onerror=function(){logoReady=true;maybeStartIntro();};
+        if(logoProbe.complete){logoReady=true;maybeStartIntro();}
       }
-      setTimeout(startIntro,1800);
+      setTimeout(function(){logoReady=true;maybeStartIntro();},1800);
     }else{
-      startIntro();
+      logoReady=true;
+      maybeStartIntro();
     }
   }
 
