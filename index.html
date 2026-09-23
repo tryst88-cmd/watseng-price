@@ -674,12 +674,13 @@ td.act .wa svg{width:21px;height:21px}
 .intro-motion.leave{opacity:0;visibility:hidden;pointer-events:none}
 .intro-logo{position:relative;width:min(72vw,560px);aspect-ratio:1}
 .intro-logo .intro-layer{position:absolute;inset:0;width:100%;height:100%;background-image:var(--intro-logo);background-position:center;background-size:contain;background-repeat:no-repeat;border-radius:50%;user-select:none}
-.intro-piece{opacity:0;will-change:transform,opacity}
+.intro-piece{opacity:0;will-change:transform,opacity;animation-play-state:paused!important}
 .intro-piece.mark{clip-path:inset(10% 7% 54% 7%);animation:introFromTop .72s cubic-bezier(.16,.78,.24,1) .08s forwards}
 .intro-piece.waves{clip-path:inset(39% 3% 31% 3%);animation:introFromLeft .76s cubic-bezier(.16,.78,.24,1) .42s forwards}
 .intro-piece.chinese{clip-path:inset(62% 12% 17% 12%);animation:introFromRight .70s cubic-bezier(.16,.78,.24,1) .76s forwards}
 .intro-piece.english{clip-path:inset(77% 13% 8% 13%);animation:introFromBottom .68s cubic-bezier(.16,.78,.24,1) 1.02s forwards}
-.intro-complete{opacity:0;animation:introComplete .48s ease 1.42s forwards}
+.intro-complete{opacity:0;animation:introComplete .48s ease 1.42s forwards;animation-play-state:paused!important}
+.intro-motion.ready .intro-piece,.intro-motion.ready .intro-complete{animation-play-state:running!important}
 @keyframes introFromTop{from{opacity:0;transform:translateY(-20%) scale(.94)}to{opacity:1;transform:none}}
 @keyframes introFromLeft{from{opacity:0;transform:translateX(-22%) scale(.96)}to{opacity:1;transform:none}}
 @keyframes introFromRight{from{opacity:0;transform:translateX(18%) scale(.97)}to{opacity:1;transform:none}}
@@ -1011,6 +1012,8 @@ td.act .wa svg{width:21px;height:21px}
   var intro=document.getElementById('introMotion');
   if(intro){
     var finished=false;
+    var started=false;
+    var startQueued=false;
     function finishIntro(){
       if(finished)return;
       finished=true;
@@ -1019,8 +1022,44 @@ td.act .wa svg{width:21px;height:21px}
         if(intro&&intro.parentNode)intro.parentNode.removeChild(intro);
       },420);
     }
+    function startIntro(){
+      if(started||startQueued)return;
+      if(document.visibilityState==='hidden'){
+        document.addEventListener('visibilitychange',function waitForVisible(){
+          if(document.visibilityState==='visible'){
+            document.removeEventListener('visibilitychange',waitForVisible);
+            startIntro();
+          }
+        });
+        return;
+      }
+      startQueued=true;
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+          started=true;
+          intro.classList.add('ready');
+          setTimeout(finishIntro,3200);
+        });
+      });
+    }
     intro.addEventListener('click',finishIntro);
-    setTimeout(finishIntro,3200);
+    var logoHost=intro.querySelector('.intro-logo');
+    var logoValue=logoHost&&logoHost.style.getPropertyValue('--intro-logo');
+    var logoMatch=logoValue&&logoValue.match(/^url\(["']?(.*?)["']?\)$/);
+    if(logoMatch&&logoMatch[1]){
+      var logoProbe=new Image();
+      logoProbe.src=logoMatch[1];
+      if(logoProbe.decode){
+        logoProbe.decode().then(startIntro).catch(startIntro);
+      }else{
+        logoProbe.onload=startIntro;
+        logoProbe.onerror=startIntro;
+        if(logoProbe.complete)startIntro();
+      }
+      setTimeout(startIntro,1800);
+    }else{
+      startIntro();
+    }
   }
 
   var nav=document.getElementById('deskModeNav');
