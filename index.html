@@ -77,6 +77,7 @@ button,a{touch-action:manipulation}
 }
 .hdr .period{font-size:11px;font-weight:700;color:var(--muted);margin-top:5px}
 .hdr .upd,.hdr .visit-count{font-size:10px;color:var(--subtle);margin-top:3px;min-height:14px}
+.hdr .visit-count .visit-badge{display:inline-block;width:auto;height:16px;max-width:100%;border:0;border-radius:0;vertical-align:middle;box-shadow:none}
 .hdr .visit-count .counterapi,.hdr .visit-count .counterapi *{color:var(--subtle)!important;font:inherit!important;text-decoration:none!important}
 .stripe-r,.stripe-b{display:none}
 
@@ -375,7 +376,7 @@ td.act .wa svg{width:21px;height:21px}
   .hdr img{width:42px;height:42px}
   .hdr .t1{font-size:18px}.hdr .t2{font-size:9.5px;letter-spacing:.22em}.hdr .t3{display:none}
   .hdr .right{margin-left:auto}.hdr .badge{font-size:10px;padding:4px 8px}.hdr .period{display:none}.hdr .upd{font-size:9px}
-  .hdr .visit-count{display:none}
+  .hdr .visit-count{display:block}
   .note{margin:9px 10px 0;padding:8px 9px;font-size:10px;border-radius:9px}
   .ctrl{
     position:sticky;top:0;z-index:20;padding:9px 10px 7px;background:rgba(255,255,255,.96);
@@ -741,8 +742,8 @@ td.act .wa svg{width:21px;height:21px}
       <span class="badge"><span id="cnt">1147</span> / 1147 团</span>
       <div class="period">2026年11月–2027年10月</div>
       <div class="upd">更新 18 November 2026</div>
-      <div class="visit-count" aria-label="网站总浏览次数">
-        <div class="counterapi" ns="watseng-push-list" action="view" key="all-visits" label="次浏览" noIcon="true" noCss="true" noLink="true" style="min-height:16px">浏览次数：--</div>
+      <div class="visit-count">
+        <img class="visit-badge" src="https://hits.sh/tryst88-cmd.github.io/watseng-price.svg?label=Views%20since%2018%20Nov%202026&amp;color=2563eb" alt="瀏覽次數（2026 年 11 月 18 日起）" referrerpolicy="no-referrer">
       </div>
     </div>
   </div>
@@ -858,7 +859,6 @@ td.act .wa svg{width:21px;height:21px}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
-<script src="https://counterapi.com/c.js?ns=watseng-push-list" async></script>
 
   <details class="desk-disclaimer">
     <summary>价格与位子说明</summary>
