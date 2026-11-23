@@ -1,15 +1,15 @@
-WAT SENG 发盛旅运 — 配套速查 FALLBACK（更新 2026-11-21｜共1092笔配套）
+WAT SENG 发盛旅运 — 配套速查 FALLBACK（更新 2026-11-23｜共1034笔配套）
 所有价格均为起价 from；位子和最终报价以顾问确认。报名/查询：WhatsApp +60 17-665 5699。
 ★严格匹配：每个团号、日期、价格、状态及供应商必须独立对应；禁止合并、猜测或套用其他团资料；缺失资料答『请顾问确认』。
 ★推荐顺序：先推自家可售团；没有合适自家团才推合作品牌，并逐条列团名、团号、完整日期、价格、状态及供应商。
 ★META 禁令：备注含『FULL／已满』的团绝对不可主动推荐或介绍卖点。客人指定询问时，只回答『该团已满』，再询问是否需要相近日期。
-★日期规则：2026年11月30日前出发的团已全部移除，11月30日当天保留；不得引用旧版资料。全年配套需顾问确认具体日期。
+★日期规则：2026年12月6日前出发的团已全部移除，12月6日当天保留；不得引用旧版资料。全年配套需顾问确认具体日期。
 ★Happy Rank 规则：只保留来源仍可售的 Selling 或 Last xx Seats 团期；Sold Out 已移除。当前 CSV 团费已加 RM400/人，回答时直接引用，不得重复加价。
 ★价格单位：必须保留原价单位（例如『/人』『/对』）和买一送一条件；不得自行换算。TO GO 表示尚需收客成团人数，不等同剩余座位；LAST SEATS 才是来源公布余位。
 ★代理奖励：Extra Commission、Double Commission、DTA 及其他代理奖励内容不对客显示。
 ★E-WORLD 规则：TO GO 仅保留尚需1–4人成团的团期；5人及以上 TO GO 不刊登。LAST SEATS 按来源余位保留。
 
-【Happy Rank 可售状态｜280团：Selling 180、Last Seats 100】
+【Happy Rank 可售状态｜262团：Selling 152、Last Seats 110】
 详细日期、价格和余位请查最新 Price List CSV；不得从旧资料补回 Sold Out 团期。
 
 【自家可推荐团 OWN — 精确记录｜13团】
@@ -36,22 +36,21 @@ WAT SENG 发盛旅运 — 配套速查 FALLBACK（更新 2026-11-21｜共1092笔
 ◆ 青岛 QINGDAO
 - 青岛海景之旅｜团号 QINGDAO-16Dec2026｜出发 16 Dec 2026｜RM4,499｜剩20位 · 首10位折扣 RM2,000 · PUSH｜供应商 自家 OWN
 
-【自家已满 FULL — 仅供状态回答，不得推荐｜4团】
-- 14D11N 极光 芬兰·挪威·瑞典 Aurora｜团号 FINLANDN-05Dec2026｜出发 05-Dec-2026｜RM21,500｜已满 FULL｜供应商 自家 OWN
+【自家已满 FULL — 仅供状态回答，不得推荐｜3团】
 - 吃在广州 · AI在深圳｜团号 GUANGZHO-11Dec2026｜出发 11-Dec-2026｜RM4,199｜已满 FULL｜供应商 自家 OWN
 - 8D7N 贵州 B1F1 买一送一 (没去黔林山)｜团号 GUIZHOU-11Dec2026｜出发 11-Dec-2026｜RM6,499 /对｜已满 FULL｜供应商 自家 OWN
 - 吃在广州 · AI在深圳｜团号 GUANGZHO-22Dec2026｜出发 22-Dec-2026｜RM4,399｜已满 FULL｜供应商 自家 OWN
 
 【合作品牌概览 — 详细日期/价格/余位必须查最新 Price List CSV】
-■ Apple Vacation：日本 Japan 75团、欧洲 Europe 45团、中国 China 26团、韩国 Korea 8团、非洲 Africa 8团、越南 Vietnam 6团、西亚 Western Asia 5团、台湾 Taiwan 4团、南亚 South Asia 2团、澳洲 Australia 2团、泰国 Thailand 1团、大洋洲 Oceania 1团、邮轮 Cruise 1团（共184团）
-■ FS：越南 Vietnam 76团、中国 China 63团、泰国 Thailand 9团、台湾 Taiwan 5团、印尼 Indonesia 5团、韩国 Korea 3团、日本 Japan 3团、澳洲 Australia 2团、菲律宾 Philippines 2团、柬埔寨 Cambodia 2团、大洋洲 Oceania 1团（共171团）
-■ GD：中国 China 133团、韩国 Korea 36团、日本 Japan 33团、台湾 Taiwan 15团、香港 · 澳门 Hong Kong · Macao 7团（共224团）
-■ Happy Rank：中国 China 214团、日本 Japan 33团、台湾 Taiwan 15团、越南 Vietnam 9团、韩国 Korea 9团（共280团）
-■ MJ：韩国 Korea 40团、日本 Japan 5团、越南 Vietnam 4团、欧洲 Europe 3团、中国 China 1团（共53团）
-■ SHÀNG：中国 China 21团、邮轮 Cruise 13团、越南 Vietnam 8团、非洲 Africa 5团、欧洲 Europe 3团、美洲 Americas 1团、日本 Japan 1团（共52团）
+■ Apple Vacation：日本 Japan 73团、欧洲 Europe 43团、中国 China 25团、非洲 Africa 8团、韩国 Korea 7团、越南 Vietnam 6团、西亚 Western Asia 5团、台湾 Taiwan 4团、南亚 South Asia 2团、澳洲 Australia 2团、泰国 Thailand 1团、大洋洲 Oceania 1团、邮轮 Cruise 1团（共178团）
+■ FS：越南 Vietnam 70团、中国 China 49团、泰国 Thailand 9团、台湾 Taiwan 5团、印尼 Indonesia 5团、韩国 Korea 3团、日本 Japan 3团、澳洲 Australia 2团、菲律宾 Philippines 2团、柬埔寨 Cambodia 2团、大洋洲 Oceania 1团（共151团）
+■ GD：中国 China 130团、韩国 Korea 32团、日本 Japan 31团、台湾 Taiwan 14团、香港 · 澳门 Hong Kong · Macao 7团（共214团）
+■ Happy Rank：中国 China 197团、日本 Japan 32团、台湾 Taiwan 14团、越南 Vietnam 10团、韩国 Korea 9团（共262团）
+■ MJ：韩国 Korea 39团、日本 Japan 5团、越南 Vietnam 4团、欧洲 Europe 3团、中国 China 1团（共52团）
+■ SHÀNG：中国 China 21团、邮轮 Cruise 13团、越南 Vietnam 7团、非洲 Africa 5团、欧洲 Europe 3团、美洲 Americas 1团、日本 Japan 1团（共51团）
 ■ Signature：中国 China 12团、欧洲 Europe 5团、韩国 Korea 4团、非洲 Africa 3团、日本 Japan 2团、柬埔寨 Cambodia 1团（共27团）
 ■ TempTraveller：中国 China 4团（共4团）
 ■ UbinGO：中国 China 7团（共7团）
-■ e-world：中国 China 44团、越南 Vietnam 3团、韩国 Korea 3团、台湾 Taiwan 2团、日本 Japan 1团（共53团）
+■ e-world：中国 China 43团、越南 Vietnam 3团、韩国 Korea 3团、台湾 Taiwan 2团、日本 Japan 1团（共52团）
 ■ 其他 Other：中国 China 18团（共18团）
 ■ 地接配套：中国 China 1团、海岛 Beach 1团（共2团）
